@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring accessors="true" comment="Delete element from project &apos;ejercicios_examenes&apos;&#x0D;&#x0A;- Original project: &apos;ejercicios_examenes&apos;&#x0D;&#x0A;- Original element: &apos;2021-daw-ptp-ud3-angelmrg&apos;" description="Delete element" element1="src/2021-daw-ptp-ud3-angelmrg" elements="0" flags="589830" id="org.eclipse.jdt.ui.delete" resources="1" stamp="1608035304294" subPackages="false" version="1.0"/>
+</session>

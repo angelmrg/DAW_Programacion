@@ -1,0 +1,22 @@
+# PTP-UD3. Instrucciones del ejercicio
+
+El ejercicio trata de implementar los m&eacute;todos vac&iacute;os de la clase Main.
+
+Antes de empezar modifica el par&aacute;metro `projectUser` y ponle como valor tu inicial seguida de tu apellido.
+Una vez realizado el cambio guarda el archivo, si lo necesitas refresca la configuraci&oacute;de Gradle en Eclipse.
+
+El ejercicio est&aacute; valorado sobre un total de 8 puntos repartidos de la siguiente forma:
+1. M&eacute;todo creaArray - 0,5 Pto.
+2. M&eacute;todo poblarArray - 0,5 Pto.
+3. M&eacute;todo ordenaArray - 2 Pto.
+4. M&eacute;todo imprimeArray - 1 Pto.
+5. M&eacute;todo main B&aacute;sico (Contiene todo lo anterior) - 1 Pto.
+6. Gesti&oacute;n de errores del m&eacute;todo creaArray - 1 Pto.
+7. Gesti&oacute;n de errores del m&eacute;todo poblarArray - 1 Pto.
+8. M&eacute;todo main Avanzado (Con todo lo anterior y gesti&oacute;n de errores) - 1 Pto.
+
+Se recomienda abordar en orden ascendente y uno a uno los ejercicios haciendo al menos un commit y un push para cada ejercicio.
+
+Este es un ejercicio cuya primera revisi&oacute;n es autom&aacute;tica en base a Test Unitarios. Es imprescindible seguir las instrucciones al pie de la letra y no tocar nada que no sea parte del ejercicio.
+
+El desarrollador debe asegurarse de que el c&oacute;digo siempre compila.

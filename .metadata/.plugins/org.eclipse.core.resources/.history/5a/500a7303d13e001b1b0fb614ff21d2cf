@@ -1,0 +1,84 @@
+{
+  "tests": [
+    {
+      "name": "Creación del Array",
+      "setup": "",
+      "run": "gradle test --tests MainTest.test01CreacionArray",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Población Array",
+      "setup": "",
+      "run": "gradle test --tests MainTest.test02PoblarArray",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 5
+    },
+    {
+      "name": "Ordenación del Array",
+      "setup": "",
+      "run": "gradle test --tests MainTest.test03OrdenarArray",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 20
+    },
+    {
+      "name": "Mostrar Array por consola",
+      "setup": "",
+      "run": "gradle test --tests MainTest.test04ImprimirArray",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Ejecución del Main Básico",
+      "setup": "",
+      "run": "gradle test --tests MainTest.test05MainBasico",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Gestión de errores creación Array",
+      "setup": "",
+      "run": "gradle test --tests MainTest.test06erroresCreacionArray",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Gestión de Errores de la población del Array",
+      "setup": "",
+      "run": "gradle test --tests MainTest.test07erroresPoblacionArray",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    },
+    {
+      "name": "Ejecución del Main con gestión de Errores",
+      "setup": "",
+      "run": "gradle test --tests MainTest.test08MainGestionErrores",
+      "input": "",
+      "output": "",
+      "comparison": "included",
+      "timeout": 10,
+      "points": 10
+    }
+  ]
+}

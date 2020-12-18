@@ -1,0 +1,99 @@
+package PF07_bombilla;
+
+import java.time.LocalDateTime;
+import java.time.temporal.ChronoUnit;
+
+/**
+ * @author angel
+ *
+ */
+import PF07_domotica.IInterruptor;
+
+public abstract class Bombilla implements IInterruptor {
+	protected String nombre;
+	protected String marca;
+	protected String modelo;
+	protected float consumo;
+	protected long vidaUtil;
+
+	protected boolean encendida;
+	protected long encendidos;
+
+	public Bombilla(String nombre, String marca, String modelo, float consumo, long vidaUtil) {
+		this.nombre = nombre;
+		this.marca = marca;
+		this.modelo = modelo;
+		this.consumo = consumo;
+		this.vidaUtil = vidaUtil;
+		encendidos = 0l;
+		encendida = false;
+	}
+
+	
+	
+	
+	
+	
+	/**
+	 * Tipo de Bombilla
+	 * 
+	 * @return Tecnolog�a que identifica el tipo de Bombilla
+	 */
+	public abstract TipoBombilla getTipo();
+
+	public void encender() {
+		if (!encendida && encendidos <= vidaUtil) {
+			encendidos++;
+			encendida = true;
+		}
+
+		if (encendidos > vidaUtil) {
+			throw new BombillaFundidaException(marca, modelo, vidaUtil);
+		}
+	}
+
+	public void apagar() {
+		encendida = false;
+	}
+
+	public String getMarca() {
+		return marca;
+	}
+
+	public String getModelo() {
+		return modelo;
+	}
+
+	public float getConsumo() {
+		return consumo;
+	}
+
+	public long getVidaUtil() {
+		return vidaUtil;
+	}
+
+	public void temporizador(String res1) {
+		LocalDateTime inicio = LocalDateTime.now();
+		System.out.println("Se ha iniciado el temporizador de la bombilla");
+		System.out.println("*********************************************");
+		
+	}
+		
+	public void temporizadorFinal(String res2, LocalDateTime inicio) {
+		
+		
+		if(res2.equals("si")) {
+			LocalDateTime fin = LocalDateTime.now();
+			System.out.println("Se ha apagado la bombilla");
+			System.out.println("*************************");
+			System.out.println("Segundos transcurridos: " + ChronoUnit.SECONDS.between(inicio,fin));
+		}	
+		
+	}	
+
+	public String toString() {					
+	
+		return nombre + " " + marca + " " + modelo + " " + consumo + " " + vidaUtil;
+	}
+	
+}

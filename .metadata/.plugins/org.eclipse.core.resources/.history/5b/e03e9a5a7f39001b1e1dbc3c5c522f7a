@@ -1,0 +1,18 @@
+package PF06_Recursividad;
+
+/*
+ * Realizar un programa que implemente el algoritmo de Euclides para calcular el MCD
+ * - De forma directa
+ * - Ilustrando el c�lculo con Arrays.
+ */
+
+public class PF06_2 {
+	public static void main(String[] args) {
+
+
+		
+		
+		
+		
+	}
+}

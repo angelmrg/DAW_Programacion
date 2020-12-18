@@ -1,0 +1,40 @@
+package PF06_Recursividad;
+import java.math.BigInteger;
+import java.util.Scanner;
+
+public class prueba {
+
+    public static void main(String[] args) {
+   	 Scanner sc = new Scanner(System.in);
+   	 long respuesta = 0;
+   	 do {
+
+   		 System.out.println("Introduzca un numero");
+   		 int numeroEntero = sc.nextInt();
+   		 BigInteger numero = new BigInteger(Integer.toString(numeroEntero));
+   		 System.out.println("El factorial de " + numero + " es: " + factR(numero));
+   		 System.out.println("El factorial de " + numero + " es: " + factI(numero));
+   		 System.out.println("Si quiere realizar otro factorial pulse 1, para salir pulse 2");
+   		 respuesta = sc.nextLong();
+   	 } while (respuesta == 1);
+   	 System.out.println("Adios");
+   	 sc.close();
+    }
+
+    public static BigInteger factR(BigInteger numero) {
+   	 BigInteger res = new BigInteger("1");
+   	 if (numero.compareTo(new BigInteger("1")) > 0) {
+   		 res = numero.multiply(factR(numero.subtract(res)));
+   	 }
+   	 return res;
+    }
+
+    public static BigInteger factI(BigInteger n) {
+   	 BigInteger res = new BigInteger("1");
+   	 for (BigInteger i = new BigInteger(n.toString()); i.compareTo(new BigInteger("1")) > 0; i = i
+   			 .subtract(new BigInteger("1"))) {
+   		 res = res.multiply(i);
+   	 }
+   	 return res;
+    }
+}

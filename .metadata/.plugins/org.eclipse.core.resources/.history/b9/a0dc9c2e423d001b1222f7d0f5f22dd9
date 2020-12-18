@@ -1,0 +1,88 @@
+package UD03_arrays;
+/*un programa que le pida al usuario un grupo de nï¿½meros enteros(como mï¿½ximo 10) y se deben
+ * guardar en un array y cuando termine que los muestre por pantalla.
+ */
+
+import java.util.Scanner;
+
+public class ejer_clase_1 {
+
+	static Scanner sc = new Scanner(System.in);
+
+	public static void main(String[] args) {
+
+		int veces;
+
+		int arr[] = new int[10];
+		try {
+			System.out.println("¿Cuantos numeros quieres que tenga el array?, con un limite de 10 numeros");
+			System.out.println("*************************************************************************");
+			veces = sc.nextInt();
+		} catch (java.util.InputMismatchException e) {
+			System.out.println("Debes escribir un numero");
+		}
+
+		pedirMostrarDatos(arr, veces);
+		ordenarValores(arr, veces);
+		mostrarOrdenados(arr, veces);
+
+	}
+
+	// Metodos
+	public static void pedirMostrarDatos(int arr[], int veces) { // Metodo para pedir los datos y mostrar los datos
+
+		System.out.println("Escribe los numeros que desees:");
+		System.out.println("*******************************");
+
+		for (int i = 0; i < veces; i++) {
+			int num = sc.nextInt();
+			arr[i] = num;
+			System.out.print("arr[" + i + "] = ");
+			System.out.println(arr[i]);
+		}
+		System.out.println("******************************");
+		System.out.print("\n");
+		System.out.println("Has escrito los siguientes numeros:");
+		System.out.print("arr[");
+		for (int i = 0; i < veces; i++) {
+
+			System.out.print(arr[i]);
+			if (i < veces - 1) {
+				System.out.print(", ");
+			}
+		}
+		System.out.print("]\n");
+		System.out.println("**********************************");
+	}
+
+	public static void ordenarValores(int arr[], int veces) { // Metodo para ordenar los valores introducidos
+
+		System.out.println("Ordenados de menor a mayor");
+		System.out.println("**************************");
+		System.out.println(veces);
+		for (int i = 0; i < veces; i++) {
+			for (int e = i + 1; e < veces; e++) {
+
+				if (arr[i] > arr[e]) {
+					int extra = arr[i];
+					arr[i] = arr[e];
+					arr[e] = extra;
+				}
+			}
+		}
+
+	}
+
+	public static void mostrarOrdenados(int arr[], int veces) { // Muestra los datos introducidos
+
+		System.out.print("enteros = [ ");
+		for (int i = 0; i < veces; i++) {
+			System.out.print(arr[i]);
+			if (i < veces - 1) {
+				System.out.print(", ");
+			}
+		}
+		System.out.print(" ]");
+	}
+
+}

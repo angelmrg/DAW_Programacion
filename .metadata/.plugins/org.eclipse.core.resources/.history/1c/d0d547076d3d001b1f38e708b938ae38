@@ -1,0 +1,47 @@
+/**
+ * 
+ */
+package arrays;
+
+import java.util.Scanner;
+
+/**
+ * @author angel
+ *
+ */
+public class CrearArray {
+
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		crearArray();
+		poblarArray();
+		ordenarArray();
+		imprimirArray();
+		
+		
+	}
+	
+	//Metodos
+	
+	public static void crearArray() {
+		System.out.println("De cuando quieres que sea el array");
+		int veces = sc.nextInt();
+		int arr[]= new int [veces];
+		System.out.println("Has elegido un array de "+ veces );
+		
+	}
+	
+	public static void poblarArray() {
+		
+	}
+	
+	public static void ordenarArray() {
+		
+	}
+	
+	public static void imprimirArray() {
+		
+	}
+
+}

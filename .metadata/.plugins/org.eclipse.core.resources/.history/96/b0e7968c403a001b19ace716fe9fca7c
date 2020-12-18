@@ -1,0 +1,48 @@
+1package PF07_bombilla;
+
+import java.time.LocalDateTime;
+/**
+ * @author angel
+ *
+ */
+import java.util.Scanner;
+
+
+public class MainBombilla {
+	public static void main(String[] args) {
+		String res1;
+		String res2 = "no";
+		LocalDateTime inicio = null;
+		// LocalDateTime fin;
+
+		Scanner sc = new Scanner(System.in);
+		BombillaHalogena b = new BombillaHalogena("Casa","Fhilip", "mod1", 25, 10);
+
+		System.out.println("******************************");
+		System.out.println("�Quieres encender la bombilla?");
+		System.out.println("******************************");
+		res1 = sc.next();
+		if (res1.equals("si")) {
+			b.temporizador(res1);
+			inicio = LocalDateTime.now();
+		}
+
+		while (res2.equals("si") == false) {
+
+			System.out.println("Quieres apagar la bombilla?");
+			System.out.println("***************************");
+			res2 = sc.next();
+
+			if (res2.equals("si")) {
+
+				b.temporizadorFinal(res2, inicio);
+
+			}
+		}
+
+		
+		System.out.println(b.toString());
+		
+		sc.close();
+	}
+}

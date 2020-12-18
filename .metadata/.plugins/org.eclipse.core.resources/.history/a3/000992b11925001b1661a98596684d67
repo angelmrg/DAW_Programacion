@@ -1,0 +1,15 @@
+package R2;
+
+/*Realizar un programa en JAVA que realice la suma de varios 
+ * números que se le pasan como argumentos.
+ */
+
+public class ejer_13 {
+public static void main(String[] args) {
+	
+	int num1 = 7;
+	int num2 = 13;
+	
+	System.out.println("La suma de " + num1 + " y " + num2 + " " + (num1+num2));
+	}
+}

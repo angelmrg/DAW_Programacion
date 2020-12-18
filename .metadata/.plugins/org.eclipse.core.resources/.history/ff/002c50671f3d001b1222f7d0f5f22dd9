@@ -1,0 +1,40 @@
+package arrays;
+
+import java.util.Scanner;
+
+/*
+ * Crea un array de 10 posiciones de números con valores pedidos por teclado. Muestra por consola 
+ * el indice y el valor al que corresponde. Haz dos métodos, uno para rellenar valores y otro para mostrar.
+ * 
+ */
+
+public class arrays_1 {
+	static Scanner sc = new Scanner(System.in);
+	public static void main(String[] args) {
+		
+		System.out.println("¿De cuanto quieres que sea el array?");
+		int res = sc.nextInt();
+		int array[] = new int[res];
+		
+		rellenarArray(res, array);
+		
+		
+	}
+	
+	//metodos
+	
+	public static void rellenarArray(int res, int array[]) {
+		for(int i=0;i<res;i++) {
+			System.out.println("Escribe el numero del array en el puesto " + i);
+			array[i]= sc.nextInt();
+			
+		}
+	}
+	
+	public static void mostrarArray(int array[]) {
+		for(int i=0;i>array.length;i++) {
+			System.out.println(array[i]);
+		}
+	}
+
+}
